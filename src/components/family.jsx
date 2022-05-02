@@ -45,7 +45,6 @@ async componentDidMount() {
     this.setState({ selectedCatogery: catogery });
   };
   render() {
-    if (this.state.members.length === 0) return <p>No family members in The Data Base.....</p>;
     const allMembers = this.state.members;
     const filtered =
       this.state.selectedCatogery && this.state.selectedCatogery._id
