@@ -27,16 +27,17 @@ class App extends Component {
       <div>
         <NavBar user={user} />
         <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/home" component={Main} />
-          <Route path="/family" component={Family} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/images" component={Images} />
-          <Route path="/not-found" component={NotFound} />
-          <Route path="/login" component={LoginForm} />
-          <Route path="/register" component={RegisterForm} />
-          <Route path="/log-out" component={LogOut} />
-          <Redirect to="/not-found" />
+          <Route path="/" exact component={Home} />
+          <Route path="/home" exact component={Main} />
+          <Route path="/family" exact component={Family} />
+          <Route path="/profile" exact component={Profile} />
+          <Route path="/images" exact component={Images} />
+          <Route path="/not-found" exact component={NotFound} />
+          <Route path="/family/:id" exact component={MemberDetails} />
+          <Route path="/login" exact component={LoginForm} />
+          <Route path="/register" exact component={RegisterForm} />
+          <Route path="/logout" exact component={LogOut} />
+          <Redirect to="not-found" />
         </Switch>
       </div>
     );

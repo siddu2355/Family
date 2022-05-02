@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import f from "../images/f.png"
 class Home extends Component {
 
 render(){
@@ -21,7 +21,7 @@ render(){
             paddingLeft: 290,
           }}
         >
-          <img src="images/f.png" alt="F" style={{ width: 250, height: 250 }} />
+          <img src={f} alt="F" style={{ width: 250, height: 250 }} />
         </div>
         <div
           className="col"

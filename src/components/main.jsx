@@ -4,6 +4,9 @@ import Card from "./card";
 import CardRight from "./cardRight";
 import Footer from "./footer";
 import MySelf from "./myself";
+import mega from "../images/mega.jpg"
+import daggubati from "../images/daggubati.jpg"
+import nandamuri from "../images/nandamuri.jpg"
 import {FaLongArrowAltLeft, FaLongArrowAltRight} from "react-icons/fa"
 import {AiOutlineLine} from "react-icons/ai"
 import "../css/App.css"
@@ -20,7 +23,7 @@ class Main extends Component {
         </div>
         <Card
           name="Mega"
-          img="images/mega.jpg"
+          img={mega}
           desc="Chiranjeevi is married to Sureka, daughter of Allu Ramalingaiah and
           sister of Telugu film producer Allu Aravind.The couple has three
           children: Srija, Sushmitha and Ram Charan, the latter is one of the
@@ -31,7 +34,7 @@ class Main extends Component {
         />
         <CardRight
           name="Daggubati"
-          img="images/daggubati.jpg"
+          img={daggubati}
           desc="
           The Daggubati–Akkineni family is a prominent Indian family with a history in Indian cinema, mainly Telugu cinema. Akkineni Nageswara Rao and Daggubati Ramanaidu are the prominent heads of both families.
            Many members of the family have been successful actors, film directors, and producers.Akkineni Nageswara Rao, actor and producer, known by his initials ANR.
@@ -40,7 +43,7 @@ class Main extends Component {
         />
         <Card
           name="Nandamuri"
-          img="images/nandamuri.jpg"
+          img={nandamuri}
           desc="Nandamuri Taraka Rama Rao (28 May 1923 – 18 January 1996), popularly known as NTR, was
            an Indian actor, filmmaker and politician who served as Chief Minister of Andhra Pradesh for seven years 
            over three terms. He starred in over 300 films, predominantly in Telugu cinema, and was referred to as Viswa Vikhyatha Nata Sarwa Bhouma

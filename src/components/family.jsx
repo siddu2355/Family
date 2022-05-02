@@ -32,8 +32,10 @@ async componentDidMount() {
   handleDelete = async (member) => {
     const originalMembers = this.state.members;
     const members = originalMembers.filter(m => m._id !== member._id)
+    if(!this.state.user.isAdmin){
+      return alert("You are not The Admin to delete the member");
+    }
     this.setState({members})
-    
   };
   
   handlePageChange = (page) => {
@@ -80,7 +82,7 @@ async componentDidMount() {
             <tbody>
               {members.map(member => (
                 <tr key={member._id}>
-                  <td><Link to={"/"+member._id} style={{textDecoration:"none"}}>{member.name}<MdVerified color="dodgerblue" size={25}/></Link></td>
+                  <td><Link to={"/family/"+member._id} style={{textDecoration:"none"}}>{member.name}<MdVerified color="dodgerblue" size={25}/></Link></td>
                   <td>{member.age}</td>
                   <td>{member.gender}</td>
                   <td>{member.catogery.name}</td>

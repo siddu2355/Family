@@ -51,9 +51,9 @@ class Form extends Component {
 
   renderButton(label) {
     return (
-      <Link style={{marginTop:12,position:"relative", marginLeft:620}} disabled={this.validate()} className="btn btn-primary">
+      <button style={{marginTop:12,position:"relative", marginLeft:620}} disabled={this.validate()} className="btn btn-primary">
         {label}
-      </Link>
+      </button>
     );
   }
 

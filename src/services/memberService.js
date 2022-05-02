@@ -6,7 +6,7 @@ export function getMembers() {
 }
 
 export function getMember(memberId) {
-  return http.get(config.apiEndpoint + "/family" + memberId);
+  return http.get(config.apiEndpoint + "/family/" + memberId);
 }
 
 export function saveMember(member) {
