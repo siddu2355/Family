@@ -55,7 +55,7 @@ class Main extends Component {
             <p style={{color:"#66fcf1", fontSize:18, fontFamily:"sans-serif", textTransform:"uppercase"}}>Very Important</p>
           <span style={{marginTop:30}}>
             <FaLongArrowAltRight size={30} color="#45a29e"  />
-            <Link to="/family" style={{fontSize:20, textDecoration:"none", color:"#c5c6c7"}}>Click</Link>
+            <Link to="/family" style={{fontSize:20,fontWeight:"bold", textDecoration:"none", color:"#c5c6c7"}}>Click</Link>
             <FaLongArrowAltLeft size={30} color="#45a29e"/>
           </span>
         </div>

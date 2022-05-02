@@ -8,7 +8,7 @@ const MySelf = () => {
               <FaQuoteLeft color="tomato" size={30} style={{position:"absolute", top:-8, left:-6}}/>
               <img src={s} alt='' className="card-img-top"/>
               <div className="card-body">
-                <p className="card-text" style={{fontStyle:"italic"}}>Many great people to all my salute...</p>
+                <p className="card-text" style={{fontStyle:"italic"}}>Many great people to all our salute...</p>
               </div>
        </div>
      );

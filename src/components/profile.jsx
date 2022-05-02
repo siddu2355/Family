@@ -17,17 +17,17 @@ class Profile extends Component {
         return (
             <div style={{
                 padding:100,
-                paddingLeft:600
+                paddingLeft:570
             }}>
                 <div>
                     <FaUserCircle size={100} color="ThreeDShadow" style={{
                         marginBottom:30,
                         position:"relative",
-                        marginLeft:90
+                        marginLeft:130
                         }}/>
                 </div>
                 <div style={{
-                    width:300,
+                    width:400,
                     height:40, 
                     backgroundColor:"#f2f2f2",
                     borderRadius:25,
@@ -41,7 +41,7 @@ class Profile extends Component {
                     fontStyle:"italic"
                     }}><p>{this.state.user.name}</p></div>
                 <div style={{
-                    width:300,
+                    width:400,
                     height:40, 
                     backgroundColor:"#f2f2f2",
                     borderRadius:25,

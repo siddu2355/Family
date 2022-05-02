@@ -50,7 +50,7 @@ async componentDidMount() {
     this.setState({ currentPage: page });
   };
   handleCatogerySelect = (catogery) => {
-    this.setState({ selectedCatogery: catogery });
+    this.setState({ selectedCatogery: catogery, currentPage:1 });
   };
   render() {
     const allMembers = this.state.members;
@@ -69,6 +69,7 @@ async componentDidMount() {
       <div className="row">
         <div className="col-2">
           <ListGroup
+          currentPage={this.state.currentPage}
             selectedCatogery={this.state.selectedCatogery}
             catogeries={this.state.catogeries}
             onCatogerySelect={this.handleCatogerySelect}

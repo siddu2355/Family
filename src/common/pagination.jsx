@@ -5,8 +5,8 @@ import _ from "lodash";
 const Pagination = (props) => {
   const { itemsCount, pageSize, onPageChange, currentPage } = props;
     const pagesCount = Math.ceil(itemsCount / pageSize);
-    if (pagesCount === 0) return "No Family Members in the data base";
     const pages = _.range(1, pagesCount + 1);
+    if(itemsCount === 0 ) return <p>Please Wait Data is about to come...</p>
     return (
       <nav >
         <ul className="pagination">

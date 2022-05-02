@@ -4,7 +4,7 @@ import "../css/App.css"
 const NotFound = () => {
     return (
         <div className='App'>
-            <h1>not-found</h1>
+            <span style={{color:"red"}}>404 Error</span><p>Not-Found</p>
         </div> 
         
      );

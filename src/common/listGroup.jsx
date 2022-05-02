@@ -1,6 +1,6 @@
 import React from "react";
 
-const ListGroup = ({ catogeries, onCatogerySelect, selectedCatogery }) => {
+const ListGroup = ({ catogeries, onCatogerySelect, selectedCatogery, currentPage }) => {
   return (
     <ul className="list-group">
       {catogeries.map((catogery) => (
