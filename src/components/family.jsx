@@ -3,7 +3,7 @@ import jwtDecode from "jwt-decode"
 import Pagination from "../common/pagination";
 import ListGroup from "../common/listGroup";
 import {Link} from "react-router-dom"
-import { deleteMember, getMembers } from "../services/memberService";
+import {  deleteMember, getMembers } from "../services/memberService";
 import { getCatogeries } from "../services/catogeryService";
 import { paginate } from "../utils/paginate";
 import {MdVerified} from "react-icons/md"
@@ -32,10 +32,18 @@ async componentDidMount() {
   handleDelete = async (member) => {
     const originalMembers = this.state.members;
     const members = originalMembers.filter(m => m._id !== member._id)
+    this.setState({members})
     if(!this.state.user.isAdmin){
       return alert("You are not The Admin to delete the member");
     }
-    this.setState({members})
+    try{
+      await deleteMember(member._id)
+    }
+    catch(ex){
+      if(ex.response&& ex.response.status===404){
+        return alert("This member had already been deleted")
+      }
+    }
   };
   
   handlePageChange = (page) => {
